@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 public class StudentService {
 
     private Long id = 0L;
-    Map<Long, Student> studentMap = new HashMap<>();
+    private Map<Long, Student> studentMap = new HashMap<>();
 
     public Student createStudent(Student student) {
         student.setId(++id);
@@ -30,12 +30,14 @@ public class StudentService {
 
     public Student updateStudent(Long id, Student student) {
         studentMap.put(id, student);
-        return student;
+          return student;
     }
 
     public Student deleteStudent(Long id) {
         return studentMap.remove(id);
 
     }
+
+
 
 }
